@@ -9,16 +9,27 @@
 
 int mystrcmp(const char *strl1, const char *strl2)
 {
-    if (strlen(strl1) == strlen(strl2))
+    int i{ 0 };
+   while (strl1[i] != '\0')
+    {
+        i++;
+    }
+    
+    int j{ 0 };
+    while (strl2[j] != '\0')
+    {
+        j++;
+    }
+    
+    if (i == j)
     {
         return 0;
     }
-    
-    else if (strlen(strl1) > strlen(strl2))
+    else if (i > j)
     {
         return 1;
     }
-    else if (strlen(strl1) < strlen(strl2))
+    else if (i < j)
     {
         return -1;
     }
